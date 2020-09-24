@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var movieSynopsisLabel: UILabel!
@@ -23,9 +25,11 @@ class MovieTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(title:String, synopsis:String) {
+    func configure(title:String, synopsis:String, posterURL:URL) {
         self.movieTitleLabel.text = title
         self.movieSynopsisLabel.text = synopsis
+        
+        self.movieImageView.af_setImage(withURL: posterURL)
     }
     
 }
