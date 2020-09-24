@@ -25,6 +25,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 <img src="YOUR_GIF_URL_HERE" width=250><br>
 
-### Notes
-Added support for:
-- 
+### Notes  
+Supported Devices:
+* iPhone 11
+* iPad Pro 12.9 inch
