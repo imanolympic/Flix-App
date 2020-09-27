@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Classes">
+   </Group>
+   <Group
+      location = "container:"
+      name = "View Controllers">
+   </Group>
+   <FileRef
+      location = "group:flixster.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
