@@ -17,9 +17,6 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 ### App Walkthrough GIF
 <img src="https://media.giphy.com/media/I1Zqt17hr7Hbxv11G3/giphy.gif" width=250><br>
 
-### Notes
-
-
 ---
 
 ## Flix Part 1
@@ -39,10 +36,3 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 ### App Walkthrough GIF
 <img src="https://media.giphy.com/media/WoioTNA2m3g1jaq89H/giphy.gif" width=250><br>
 
-
-
-
-### Notes  
-Supported Devices:
-* iPhone 11
-* iPad Pro 12.9 inch
