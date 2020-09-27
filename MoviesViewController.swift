@@ -28,7 +28,7 @@ class MoviesViewController: UIViewController {
               let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
               
             self.movies = dataDictionary["results"] as! [[String:Any]]
-            
+        
             self.moviesTableView.reloadData()
            }
         }
@@ -37,9 +37,21 @@ class MoviesViewController: UIViewController {
         moviesTableView.delegate = self
         moviesTableView.dataSource = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Capture the cell requesting to be displayed
+        let cell = sender as! MovieTableViewCell
+        
+        // Capture the movie to be displayed
+        let indexPath = moviesTableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        let movieInfoViewController = segue.destination as! MovieInfoViewController
+        movieInfoViewController.movie = movie
+    }
 }
 
-
+// MARK: - Table View Methods
 extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -53,8 +65,7 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Movie Cell") as! MovieTableViewCell
         
         let movie = movies[indexPath.row]
-        print(movie)
- 
+        
         let movieTitle = movie["title"] as! String
         let movieSynopsis = movie["overview"] as! String
         let posterPath = movie["poster_path"] as! String
@@ -68,5 +79,4 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-    
 }
